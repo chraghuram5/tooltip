@@ -8,10 +8,10 @@ class DropDown extends React.Component {
             //drop down with four positions
             <div>
                 <select id="position" name="cars" className="dropdown">
+                    <option value="top" selected>Top</option>
                     <option value="left">Left</option>
                     <option value="right">Right</option>
                     <option value="bottom">Bottom</option>
-                    <option value="top" selected>Top</option>
                 </select>
             </div>
         )
