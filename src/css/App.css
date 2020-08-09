@@ -1,0 +1,34 @@
+/* setting background color of the screen */
+body{
+    background-color: #011E2C;
+  }
+
+  /* drop down container for dropdown and render button */
+  .dropdown-container{
+    height: 5rem;
+    float: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  /* render button color and padding */
+  .render-button {
+    padding: 0.5rem;
+    background-color:white;
+    color: black;
+    text-align: center;
+    border-radius: 0.5rem;
+  
+    cursor: pointer;
+  }
+
+  /* button container for buttonwith tooptip */
+  .button-container {
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  

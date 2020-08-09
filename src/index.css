@@ -1,13 +1,135 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body{
+  background-color: #011E2C;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.button-tooltip {
+  position: absolute;
+}
+
+.tooltip {
+  display: none;
+  background-color:#F73C57;
+  color:white;
+  padding: 0.5rem;
+  text-align: center;
+  position: absolute;
+  width: 4rem;
+}
+
+.button-tooltip:hover .tooltip {
+  display: block;
+}
+
+.button-container {
+  height: 90vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-info {
+  width: 6rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  border: 1px solid white;
+  background-color: black;
+  color: white;
+  position: absolute;
+}
+
+.button-info:hover{
+  color: black;
+  background-color: white;
+  cursor: pointer;
+}
+
+.left {
+  right: 1rem;
+}
+
+.right {
+  left: 9rem;
+}
+
+.top {
+  bottom: 1rem;
+  left: 2rem;
+}
+
+.bottom {
+  top: 4rem;
+  left: 2rem;
+}
+
+.render-button {
+  padding: 0.5rem;
+  background-color:white;
+  color: black;
+  text-align: center;
+  border-radius: 0.5rem;
+
+  cursor: pointer;
+}
+
+.top::after{
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid; 
+  border-color: #F73C57 transparent transparent transparent;
+}
+
+.bottom::after{
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #F73C57 transparent;
+}
+
+.right::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  right: 100%; /* To the left of the tooltip */
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent #F73C57 transparent transparent;
+}
+
+.left::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 100%; /* To the right of the tooltip */
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent #F73C57;
+}
+
+.dropdown{
+  width: 5rem;
+  padding: 0.25rem;
+  background-color: black;
+  color: white;
+  border-radius: 1px solid white;
+  border-radius: 0.5rem;
+}
+
+.dropdown-container{
+  height: 5rem;
+  float: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
