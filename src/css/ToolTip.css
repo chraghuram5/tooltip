@@ -1,0 +1,72 @@
+/* toop tip with padding and no display */
+.tooltip {
+    display: none;
+    background-color:#F73C57;
+    color:white;
+    padding: 0.5rem;
+    text-align: center;
+    position: absolute;
+    width: 4rem;
+  }
+
+   /* toop tip on left */
+   .left {
+    right: 1rem;
+  }
+  
+  /* tooltip on right */
+  .right {
+    left: 9rem;
+  }
+  
+  /* tooltip on top */
+  .top {
+    bottom: 1rem;
+    left: 2rem;
+  }
+  
+  /* tooltip on bottom */
+  .bottom {
+    top: 4.5rem;
+    left: 2rem;
+  }
+
+  /* tip of tooltip at bottom */
+  .top::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    border: solid 5px;
+    border-color: #F73C57 transparent transparent transparent;
+  }
+  
+  /* tip of tool tip at top */
+  .bottom::after{
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    border: solid 5px;
+    border-color: transparent transparent #F73C57 transparent;
+  }
+  
+  /* tip of tooltip on left */
+  .right::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    right: 100%; 
+    border: solid 5px;
+    border-color: transparent #F73C57 #F73C57 transparent;
+  }
+  
+  /* tip of tooptip on right */
+  .left::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: 100%; 
+    border: solid 5px;
+    border-color: transparent transparent #F73C57 #F73C57;
+  }

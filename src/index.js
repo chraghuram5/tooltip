@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import './css/App.css';
 import './css/ButtonWithToolTip.css';
 import './css/DropDown.css';
+import './css/ToolTip.css';
 import App from './Components/App';
 
 ReactDOM.render(

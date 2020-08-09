@@ -1,17 +1,18 @@
 import React from 'react';
+import ToolTip from './ToolTip';
 
 class ButtonWithToolTip extends React.Component {
 
     render() {
         const { position } = this.props;
-        const currentClass = 'tooltip ' + position;
         return (
             <div className="button-tooltip">
                 {/* Button visible before hovering */}
-                <span class="button-info">Hover</span>
+                <button class="button-info">Hover</button>
                 {/* Tool tip of the button visible after hover */}
-                <span className={currentClass}>Tooltip
-                </span>
+               <ToolTip
+               position={position}
+               />
             </div>
         )
     }
